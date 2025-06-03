@@ -35,3 +35,6 @@ git clone https://github.com/vikas8004/product-catalog.git
 cd product-catalog
 npm install
 npm run dev
+
+[Visit live site](https://product-catalog12.netlify.app/)
+
