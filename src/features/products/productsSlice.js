@@ -1,5 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import Fuse from "fuse.js";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { createSelector } from "reselect";
 // Async thunk to fetch products
 export const fetchProducts = createAsyncThunk(
