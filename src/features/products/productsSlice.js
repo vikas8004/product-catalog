@@ -72,15 +72,11 @@ export const selectFilteredProducts = state => {
   // If no search query, return category-filtered list
   if (!searchQuery.trim()) return filteredByCategory;
 
-  const fuse = new Fuse(filteredByCategory, {
-    keys: ["title"],
-    threshold: 0.4 // Lower = stricter match, higher = looser
-  });
-
-  const results = fuse.search(searchQuery);
-
-  // Map Fuse results back to original items
-  return results.map(result => result.item);
+  // Case-insensitive title search
+  const lowerQuery = searchQuery.toLowerCase();
+  return filteredByCategory.filter(item =>
+    item.title.toLowerCase().includes(lowerQuery)
+  );
 };
 
 const selectItems = state => state.products.items;

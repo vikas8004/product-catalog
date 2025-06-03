@@ -1,13 +1,14 @@
 
 import { useSelector, useDispatch } from 'react-redux';
 import { increaseQty, decreaseQty, removeFromCart } from '../features/cart/cartSlice';
+import { Link } from 'react-router-dom';
 
 export default function CartItemsList() {
     const cartItems = useSelector((state) => state.cart.items);
     const dispatch = useDispatch();
 
     if (cartItems.length === 0) {
-        return <p className="text-gray-500 text-center mt-30">No items in the cart.</p>;
+        return <p className="text-gray-500 text-center mt-30">No items in the cart. <Link to={"/"} className=' font-bold'>Browse products</Link ></p>;
     }
 
     const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -58,7 +59,7 @@ export default function CartItemsList() {
 
                                 <div className="text-right">
                                     <button
-                                        className="btn btn-sm btn-error"
+                                        className="btn btn-sm btn-primary"
                                         onClick={() => dispatch(removeFromCart(item.id))}
                                     >
                                         Remove

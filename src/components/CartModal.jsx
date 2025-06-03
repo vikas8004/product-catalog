@@ -11,7 +11,7 @@ export default function CartModal({ onClose }) {
     const totalAmount = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     return (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="fixed bg-base-300 inset-0 z-50  bg-opacity-50 flex items-center justify-center">
             <div className="bg-white max-w-md w-full p-4 rounded shadow-lg relative text-black mx-4 sm:mx-auto">
                 <button className="btn btn-sm btn-circle absolute top-2 right-2" onClick={onClose}>✕</button>
                 <h3 className="text-lg font-bold mb-4">Your Cart</h3>
