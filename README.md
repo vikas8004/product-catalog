@@ -31,7 +31,7 @@ Make sure you have:
 # Clone the project and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/ecommerce-app.git
+git clone https://github.com/vikas8004/product-catalog.git
 cd product-catalog
 npm install
 npm run dev
