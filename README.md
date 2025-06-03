@@ -30,6 +30,7 @@ Make sure you have:
 
 # Clone the project and install dependencies:
 
+```bash
 git clone https://github.com/your-username/ecommerce-app.git
 cd product-catalog
 npm install
