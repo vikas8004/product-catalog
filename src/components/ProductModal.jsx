@@ -17,7 +17,7 @@ export default function ProductModal() {
     const { title, id, image, price, description, category, rating } = selectedProduct;
 
     return (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-40 flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-50 bg-base-300 bg-opacity-40 flex items-center justify-center px-4">
             <div className="bg-white text-black w-full max-w-xl max-h-[90vh] overflow-y-auto rounded-lg p-6 shadow-lg relative">
                 <button
                     className="absolute top-2 right-2 text-xl text-gray-600 hover:text-black cursor-pointer"
